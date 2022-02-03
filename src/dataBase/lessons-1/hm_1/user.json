@@ -1,0 +1,50 @@
+[
+  {
+    "id": "id-1",
+    "username": "Jacques Gluke",
+    "tag": "jgluke",
+    "location": "Ocho Rios, Jamaica",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+    "stats": {
+      "followers": 5603,
+      "views": 4827,
+      "likes": 1308
+    }
+  },
+  {
+    "id": "id-2",
+    "username": "Key Log",
+    "tag": "jgluke",
+    "location": "Utach, USA",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+    "stats": {
+      "followers": 3345,
+      "views": 427,
+      "likes": 9998
+    }
+  },
+  {
+    "id": "id-3",
+    "username": "Ken Block",
+    "tag": "cBlock",
+    "location": "Poland, WWA",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+    "stats": {
+      "followers": 3074,
+      "views": 10445,
+      "likes": 443
+    }
+  },
+  {
+    "id": "id-4",
+    "username": "Jacke Logan",
+    "tag": "jgluke",
+    "location": "Germany, Berlin",
+    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+    "stats": {
+      "followers": 3603,
+      "views": 6886,
+      "likes": 12300
+    }
+  }
+]
