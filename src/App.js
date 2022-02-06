@@ -1,30 +1,19 @@
-import User from "./components/lessons-1/hm-01/users";
-import user from "./dataBase/lessons-1/hm_1/user.json";
+import ProfileList from "./components/lessons-1/hm-01/ProfileList";
+import usersData from "./dataBase/lessons-1/hm_1/user.json";
+import Section from "./components/lessons-1/hm-01/Section";
+import friends from "../src/dataBase/lessons-1/hm_3/friends.json";
+import FriendList from "./components/lessons-1/hm-03/FriendList";
+import transaction from "./dataBase/lessons-1/hm_4/transactions.json";
+import TransactionHistory from "./components/lessons-1/hm-04/TransactionHistory";
 
 export default function App() {
   return (
-    <div>
-      <User
-        username={user[0].username}
-        likes={user[0].stats.likes}
-        // url={user[0].avatar}
-        views={user[0].stats.views}
-        followers={user[0].stats.followers}
-      />
-      <User
-        username={user[1].username}
-        likes={user[1].stats.likes}
-        url={user[1].avatar}
-        views={user[1].stats.views}
-        followers={user[1].stats.followers}
-      />
-      <User
-        username={user[2].username}
-        likes={user[2].stats.likes}
-        url={user[2].avatar}
-        views={user[2].stats.views}
-        followers={user[2].stats.followers}
-      />
+    <div className="profile">
+      <Section title="Top users">
+        <ProfileList items={usersData} />
+      </Section>
+      <FriendList items={friends} />
+      <TransactionHistory items={transaction} />
     </div>
   );
 }
