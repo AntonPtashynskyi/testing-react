@@ -1,0 +1,22 @@
+.tableHead {
+  width: 200px;
+  text-align: center;
+}
+
+.tableRaw {
+  height: 50px;
+  background-color: aqua;
+}
+
+.bodyRaw {
+  height: 20px;
+}
+
+.bodyData {
+  text-align: center;
+  padding: 5px;
+}
+
+.bodyRaw:nth-child(2n) {
+  background-color: antiquewhite;
+}

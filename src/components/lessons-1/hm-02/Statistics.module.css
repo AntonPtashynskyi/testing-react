@@ -1,0 +1,40 @@
+.statistics {
+  width: 250px;
+  height: auto;
+  background-color: rgb(98, 238, 238);
+  text-align: center;
+  margin: 20px;
+
+  font-family: sans-serif;
+}
+
+.title {
+  margin: 0;
+  padding: 20px 0 20px;
+}
+
+.statList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  padding: 4px;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
