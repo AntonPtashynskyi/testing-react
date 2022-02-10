@@ -1,0 +1,18 @@
+.dropdown {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.dropMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  padding: 20px;
+  text-align: center;
+
+  background-color: rgb(231, 82, 27);
+  color: #fff;
+}

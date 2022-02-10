@@ -1,0 +1,13 @@
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+.todo__btn {
+  margin-left: 50px;
+}

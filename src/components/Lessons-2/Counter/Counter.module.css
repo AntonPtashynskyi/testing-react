@@ -1,0 +1,30 @@
+.box {
+  width: 250px;
+  height: 150px;
+  background-color: aqua;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.value {
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+.button {
+  width: 75px;
+  height: 35px;
+  border-style: none;
+  background-color: teal;
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.button:first-child {
+  margin-right: 20px;
+}
