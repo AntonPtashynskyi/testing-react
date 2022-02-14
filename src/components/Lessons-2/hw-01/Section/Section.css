@@ -1,4 +1,22 @@
 .sectionFeedBack {
   margin-right: auto;
   margin-left: auto;
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgba(127, 255, 212, 0.459);
+  border-radius: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }

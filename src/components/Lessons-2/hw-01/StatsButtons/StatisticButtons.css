@@ -1,8 +1,9 @@
 .statsBtn {
   cursor: pointer;
+  width: 80px;
 
-  margin-right: 10px;
   padding: 5px 10px;
+  margin-bottom: 5px;
 
   background-color: rgb(81, 115, 226);
   color: aliceblue;
@@ -14,8 +15,6 @@
   border: none;
   border-radius: 5px;
   outline: none;
-
-  transition: background-color 100ms ease-in-out;
 }
 
 .statsBtn:active {
