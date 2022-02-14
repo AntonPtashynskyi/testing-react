@@ -10,7 +10,7 @@ import Statistics from "components/lessons-1/hm-02/Statistics";
 // import ColorPicker from "components/lessons-1/ColorPicker/ColorPicker";
 // import ColorPickerOptions from "./components/lessons-1/ColorPicker/ColorPickerOptions";
 // import Alert from "./components/lessons-1/Alert/Alert";
-// import Box from "./components/lessons-1/Box/Box";
+// import Box from "./components/lessons-1/Box/Box"
 
 export default function App() {
   return (
