@@ -1,0 +1,45 @@
+.phoneTitle {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.phoneForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formName {
+  display: inline-block;
+  margin-right: auto;
+}
+
+.formInput {
+  display: block;
+}
+
+.formBtn {
+  width: 200px;
+  margin: 0;
+}
+
+.contactList {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.contactItem {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.filterLabel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 200px;
+  margin: 20px;
+}

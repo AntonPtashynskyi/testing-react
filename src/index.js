@@ -6,13 +6,14 @@ import ReactDOM from "react-dom";
 // Lessons 2
 // import AppClasses from "./AppClasses";
 import Lessons2HW1 from "./AppLessons2HW";
+import AppPhoneBook from "./AppPhoneBook";
 // import AppForm from "./AppForm";
 
 import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Lessons2HW1 />
+    <AppPhoneBook />
   </React.StrictMode>,
   document.getElementById("root")
 );
