@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 import PhoneBook from "../PhoneBook/PhoneBook";
 import Filter from "../Filter/Filter";
 import "../Common.css";
+
 const { Component } = require("react/cjs/react.production.min");
 
 class Form extends Component {
@@ -17,30 +18,43 @@ class Form extends Component {
     filter: "",
   };
 
-  handleNameChange = (e) => {
-    this.setState({ name: e.currentTarget.value });
-  };
-
-  handleNumberChange = (e) => {
-    this.setState({ number: e.currentTarget.value });
-  };
-
-  handleFilterChange = (e) => {
-    this.setState({ filter: e.currentTarget.value });
+  handleChange = (e) => {
+    const { name, value } = e.currentTarget;
+    this.setState({ [name]: value });
   };
 
   handleSubmit = (e) => {
     const { name, contacts, number } = this.state;
     e.preventDefault();
-    const savedContacts = contacts;
     const uniqId = nanoid();
 
-    savedContacts.push({ id: { uniqId }, name: name, number: number });
-    this.setState({ name: "", number: "" });
+    const contactName = contacts.map((contact) => contact.name);
+
+    if (contactName.includes(name)) {
+      alert(`${name} is already in library`);
+    } else {
+      contacts.push({ id: uniqId, name: name, number: number });
+      this.setState({ name: "", number: "" });
+    }
+  };
+
+  getFilteredContacts = () => {
+    const normalizedFilter = this.state.filter.toLocaleLowerCase();
+    return this.state.contacts.filter((contact) =>
+      contact.name.toLocaleLowerCase().includes(normalizedFilter)
+    );
+  };
+
+  deleteContact = (id) => {
+    const { contacts } = this.state;
+
+    this.setState((prevState) => ({
+      contacts: prevState.contacts.filter((item) => item.id !== id),
+    }));
   };
 
   render() {
-    const { name, contacts, number, filter } = this.state;
+    const { name, number, filter } = this.state;
 
     return (
       <section>
@@ -50,7 +64,7 @@ class Form extends Component {
             <input
               className="formInput"
               value={name}
-              onChange={this.handleNameChange}
+              onChange={this.handleChange}
               name="name"
               type="text"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -65,7 +79,7 @@ class Form extends Component {
             <input
               className="formInput"
               value={number}
-              onChange={this.handleNumberChange}
+              onChange={this.handleChange}
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -79,8 +93,13 @@ class Form extends Component {
             Add contact
           </button>
         </form>
-        <Filter filter={filter} onFilter={this.handleFilterChange} />
-        <PhoneBook contacts={contacts} number={number} title="Contact" />
+        <Filter filter={filter} onFilter={this.handleChange} />
+        <PhoneBook
+          deleteContact={this.deleteContact}
+          contacts={this.getFilteredContacts()}
+          number={number}
+          title="Contact"
+        />
       </section>
     );
   }
