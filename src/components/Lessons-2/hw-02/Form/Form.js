@@ -46,13 +46,27 @@ class Form extends Component {
   };
 
   deleteContact = (id) => {
-    const { contacts } = this.state;
-
     this.setState((prevState) => ({
       contacts: prevState.contacts.filter((item) => item.id !== id),
     }));
   };
 
+  componentDidUpdate(prevState) {
+    if (prevState !== this.state.contacts) {
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    }
+  }
+
+  componentDidMount() {
+    //Делаем прверку localStorage c предыдущей сессией и записываем в state даные с localStorage
+    const contacts = localStorage.getItem("contacts");
+    const parsedContacts = JSON.parse(contacts);
+
+    if (parsedContacts) {
+      // если изначально приходит пустой массив он приводиться к null и дальше код ломаеться так как не может прочитать свойства массива с null.
+      this.setState({ contacts: parsedContacts });
+    }
+  }
   render() {
     const { name, number, filter } = this.state;
 
