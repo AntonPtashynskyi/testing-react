@@ -23,7 +23,7 @@ export default class PokemonForm extends Component {
   };
 
   render() {
-    const { pokemonName, isLoading } = this.state;
+    const { pokemonName } = this.state;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>

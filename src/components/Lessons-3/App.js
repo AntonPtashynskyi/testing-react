@@ -4,6 +4,7 @@ import { Component } from "react/cjs/react.production.min";
 import Modal from "./Modal/Modal";
 import Clock from "./CLock/Clock";
 
+// Pokemon search
 import Section from "components/Lessons-2/hw-01/Section/Section";
 import PokemonForm from "./PokemonAPI/PokemonForm";
 import PokemonInfo from "./PokemonAPI/PokemonInfo";
@@ -23,7 +24,7 @@ class App extends Component {
   };
 
   render() {
-    const { showModal, pokemonName } = this.state;
+    const { pokemonName, showModal } = this.state;
 
     return (
       <Section>

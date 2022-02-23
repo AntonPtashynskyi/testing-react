@@ -1,1 +1,0 @@
-import "./SearchImage.css";

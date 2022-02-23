@@ -12,11 +12,12 @@ import "./index.css";
 // import AppForm from "./AppForm";
 
 //Lessons 3
-import App from "./components/Lessons-3/App";
+// import App from "./components/Lessons-3/App";
+import AppGalley from "./components/Lessons-3/ImageGallery/AppGallery";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppGalley />
   </React.StrictMode>,
   document.getElementById("root")
 );
